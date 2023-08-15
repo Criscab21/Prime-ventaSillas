@@ -15,31 +15,44 @@ a{
 
 /* Menu principal */
 
-
-
 .menu_horizontal{
-    background-color: #00250041;
-    box-sizing: border-box;
-    
+    min-height: 4vh;
+    display: grid;        
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "seccion1 seccion2 seccion3 seccion4 seccion5";    
+    background-color: #00250041;               
 }
 
-.menu_horizontal{
-    list-style: none;
+.menu_horizontal > .option > a {
     display: flex;
-    justify-content: space-around;
-    
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100%;    
 }
 
-.menu_horizontal > li > a{
-    display: block;
-    padding: 15px 20px;
-    color: white;
-    text-decoration: none;
+.menu_inicio{
+    grid-area: seccion1;
 }
 
-.menu_horizontal > li:hover {
-    background-color: rgba(48, 0, 124, 0.514);
-    border-radius: 10%;
+.menu_ingreso{
+    grid-area: seccion2;
+}
+
+.menu_productos{
+    grid-area: seccion3;
+}
+
+.menu_carrito{
+    grid-area: seccion4;
+}
+
+.menu_about{
+    grid-area: seccion5;
+}
+.menu_horizontal > .option:hover {
+    background-color: rgba(48, 0, 124, 0.514);    
 }
 
 .menu_vertical {
@@ -50,7 +63,7 @@ a{
     background-color: rgba(48, 0, 124, 0.514);
 }
 
-.menu_horizontal li:hover .menu_vertical{
+.menu_horizontal .menu_productos:hover .menu_vertical{
     display: block;
 }
 
@@ -172,13 +185,16 @@ a{
 }
 
 .button_registro{
-    margin-top: 80px;
+    display: flex;
+    min-height: 100%;
+    justify-content: space-around;
+    margin-top: 8vh;
 }
 
-.button_registro div h3{
-    font-size: 4vh;
-    text-align: center;
-   
+.button_registro > button{
+    border-radius: 1vh;
+    background-color: rgb(104, 85, 122);
+    font-size: 4vh;             
 }
 
 /* Registro HTML */
@@ -222,8 +238,32 @@ a{
 
 
 @media (max-width: 550px){
-
     
+    .menu_horizontal{
+        min-height: 4vh;
+        display: grid;        
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "seccion1" "seccion2" "seccion3" "seccion4" "seccion5";    
+        background-color: #00250041;               
+    }
+    
+    .menu_horizontal > .option > a {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 100%;    
+    }    
+
+    .menu_horizontal .menu_productos:hover .menu_vertical{
+        display: none;
+    }
+       
+
+    .menu_vertical{
+        display: none;
+    }
 
     .contenedor_galeria{
         grid-template-columns: 1fr;
