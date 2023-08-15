@@ -3,16 +3,12 @@
     padding: 0;      
 }
 body{
+    position: relative;
     background: rgb(2,0,36);
-    background: linear-gradient(38deg, rgba(2,0,36,1) 0%, #92998296 83%, #35307abd 100%);
-    
-    
-    margin: auto;   
-    min-height: 100vh;
-    padding: 2vh;
+    background: linear-gradient(38deg, rgba(2,0,36,1) 0%, #92998296 83%, #35307abd 100%);        
+    min-height: 100vh;    
 }
-a{
-    
+a{    
     color: white;
     text-decoration: none;
 }
@@ -100,18 +96,18 @@ a{
     color: #2e2222;  
 }
 
+.footer_container{
 
-footer{
-    background-size: 100%;
+    
     background-color:  rgba(73, 78, 1, 0.425);
     color: aliceblue;
-    font-size: 2.5vh;
-    position:fixed;
+    min-width: 100%;
+    position: absolute;
     bottom: 0;
+    font-size: 2.5vh;   
     text-align: center;
-
+    
 }
-
 
 
 #footer_link{
@@ -198,8 +194,7 @@ footer{
 .form_login > input, .form_registro > form input{
     color: rgb(241, 207, 228);
     background-color: rgba(0, 0, 0, 0);
-    width: 100%;
-    margin: 2px;
+    width: 100%;    
     font-size: 25px;
     border: none;       
     border-bottom:4px solid black ;
