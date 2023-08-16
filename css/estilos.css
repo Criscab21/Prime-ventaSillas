@@ -7,6 +7,7 @@ body{
     background: rgb(2,0,36);
     background: linear-gradient(38deg, rgba(2,0,36,1) 0%, #92998296 83%, #35307abd 100%);        
     min-height: 100vh;    
+    padding-bottom: 60px;
 }
 a{    
     color: white;
@@ -110,13 +111,12 @@ a{
 }
 
 .footer_container{
-
-    
+    position: absolute;
+    bottom: 0;    
     background-color:  rgba(73, 78, 1, 0.425);
     color: aliceblue;
-    min-width: 100%;
-    position: absolute;
-    bottom: 0;
+    min-height: 2.5vh;
+    min-width: 100%;            
     font-size: 2.5vh;   
     text-align: center;
     
@@ -271,5 +271,9 @@ a{
     }
     .box{
         margin: 5px;
+    }
+    .footer_container{
+        
+        
     }
 }
