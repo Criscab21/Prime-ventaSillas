@@ -1,0 +1,250 @@
+$color-link-button-hover: rgba(48, 0, 124, 0.904);
+$color-link-button-text: rgb(144, 158, 16);      
+
+*{
+    margin: 0;
+    padding: 0;      
+}
+body{    
+    background: rgb(0, 0, 0);
+    background: linear-gradient(38deg, rgb(126, 119, 255) 0%, #51574396 83%, #373099bd 100%);               
+}
+a{    
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* Menu principal */
+
+.menu_horizontal{ 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;        
+    grid-template-areas:
+    "icon1 f1 f2 f3 f4 f5"
+    "seccion1 seccion2 seccion3 seccion4 seccion5 seccion6";       
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 25vh;
+    border-bottom: 1.5vh solid rgba(255, 239, 239, 0.527);
+        .option{
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            align-items: center;
+            min-height: 100%;    
+        }
+        .icon_start{
+            grid-area: f1;
+        }        
+        .titulo{
+            grid-area: seccion2;
+        }        
+        .menu_productos{
+            grid-area: seccion3;
+        }        
+        .menu_ingreso{
+            grid-area: seccion4;
+        }      
+        .menu_about{
+            grid-area: seccion5;
+        }
+        .links:hover {
+            background-color: rgba(48, 0, 124, 0.514);    
+        }
+        
+}
+
+
+
+.carousel_container {
+    padding-top: 5vh;
+    padding-right: 75vh;
+    padding-left: 75vh;
+    .box_carousel {              
+        border: 0.5vh solid rgba(255, 239, 239, 0.425);
+        width: 25rem;
+        height: 25rem;      
+    }            
+}
+
+/* Titulo */
+
+.icon_start {
+    animation-name: iconSpin;
+    animation-duration: 2s;
+    animation-delay: 0;
+    a{
+        img{
+            width: 12vh;
+        }
+    }    
+}
+    
+.h1_registro {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 6vw;
+    font-family: sans-serif;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a1aadb11;    
+    color: #2e2222;  
+}
+    
+.titulo > a > h1{    
+    color: #1f16a3; 
+}
+
+/* Productos HTML */
+
+
+.contenedor_galeria{
+    min-height: 70vh;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "foto1 foto2"
+    "foto3 foto4";
+    justify-items: center;    
+    align-items: center;        
+    .box{
+        border: 0.5vh solid rgba(255, 239, 239, 0.61);
+        width: 15rem;
+        height: 15rem;       
+    }
+    @for $i from 1 through 4 {
+        .box#{$i} {
+            grid-area: foto#{$i};
+        }
+    }           
+    .box img{    
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+        width: 100%;
+        height: 100%;  
+    }
+}
+
+/* Ingreso HTML y Registro html */
+
+.form_login h2, .form_registro h2 {
+    border-bottom: 4px solid rgba(0, 0, 0, 0.349);
+    font-size: 6vh;
+    margin: 30px;
+    color: rgb(34, 26, 31);
+    text-align: center;
+}
+
+.form_login > input, .form_registro > form input{
+    color: rgb(241, 207, 228);
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;    
+    font-size: 25px;
+    border: none;       
+    border-bottom:4px solid black ;
+    
+}
+
+.form_login > input::placeholder, .form_registro > form input::placeholder{    
+    color: bisque;
+}
+
+.form_registro > form #registro_enviar:hover, #registro_reset:hover {
+    background-color: $color-link-button-hover;
+    color: $color-link-button-text;
+}
+
+.form_login > #ingreso_enviar:hover, #button_registro:hover {
+    background-color: $color-link-button-hover;
+    color: $color-link-button-text;
+}
+
+/* About US.html */
+
+.text_aboutUs {
+    text-align: center;
+    margin: 50px 50px;
+    color: bisque;
+    background-color: #aa7fc72a;
+    font-size: 20px;
+}
+
+
+/* Contactos */
+
+.contactos {
+    margin-top: 5vh;
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 25vh;
+    border-top: 1.5vh solid rgba(255, 239, 239, 0.527);          
+    background: linear-gradient(38deg, rgb(82, 73, 253) 0%, #51574396 83%, #6861bebd 100%);
+    .venta_telefono, .horarios, .escribinos, .whatsapp {
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 550px){
+    
+    .menu_horizontal{
+        min-height: 4vh;
+        display: grid;        
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "f1" "seccion2" "seccion3" "seccion4" "seccion5";    
+        background-color: #00250041;               
+    }
+
+    .menu_horizontal > .option > a {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+        min-height: 100%;    
+    }        
+    
+    .contenedor_galeria{
+        grid-template-columns: 1fr;
+        grid-template-areas: "foto1" "foto2" "foto3" "foto4";        
+    }
+    .box{
+        margin: 5px;
+    }    
+    
+    .carousel_container {
+        padding-top: 5vh;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+
+@keyframes iconSpin {
+    
+    0% {
+        transform: rotateY(630deg);
+    }
+    
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
