@@ -186,16 +186,35 @@ a {
 @media (max-width: 550px) {
   .menu_horizontal {
     min-height: 4vh;
+    width: 550px;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "f1" "seccion2" "seccion3" "seccion4" "seccion5";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "f1 seccion3" "seccion2 seccion4" "seccion6 seccion5";
     background-color: rgba(0, 37, 0, 0.2549019608);
+  }
+  .menu_horizontal .icon_start {
+    grid-area: f1;
+  }
+  .menu_horizontal .titulo {
+    grid-area: seccion2;
+  }
+  .menu_horizontal .menu_productos {
+    grid-area: seccion3;
+  }
+  .menu_horizontal .menu_ingreso {
+    grid-area: seccion4;
+  }
+  .menu_horizontal .menu_about {
+    grid-area: seccion5;
+  }
+  .menu_horizontal .links {
+    border: 0.1vh solid rgba(255, 239, 239, 0.425);
   }
   .menu_horizontal > .option > a {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
     align-items: center;
+    text-align: center;
     min-height: 100%;
   }
   .contenedor_galeria {
@@ -205,10 +224,31 @@ a {
   .box {
     margin: 5px;
   }
+  .icon_start {
+    padding-top: 5vh;
+  }
+  .icon_start a img {
+    width: 8vh;
+  }
+  .titulo {
+    padding-top: 6vh;
+  }
+  .titulo a h1 {
+    font-size: 5vh;
+  }
   .carousel_container {
     padding-top: 5vh;
     padding-right: 0;
-    padding-left: 0;
+    padding-left: 8vh;
+  }
+  .carousel_container .box_carousel {
+    border: 0.5vh solid rgba(255, 239, 239, 0.425);
+    width: 25rem;
+    height: 25rem;
+  }
+  .contactos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @keyframes iconSpin {

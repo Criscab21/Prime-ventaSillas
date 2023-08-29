@@ -106,8 +106,7 @@ a{
 
 .contenedor_galeria{
     min-height: 70vh;
-    display: grid;
-    
+    display: grid;    
     grid-template-columns: 1fr 1fr;
     grid-template-areas: 
     "foto1 foto2"
@@ -198,33 +197,80 @@ a{
     
     .menu_horizontal{
         min-height: 4vh;
-        display: grid;        
-        grid-template-columns: 1fr;
+        width: 550px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;                            
         grid-template-areas: 
-        "f1" "seccion2" "seccion3" "seccion4" "seccion5";    
-        background-color: #00250041;               
+        "f1 seccion3" "seccion2 seccion4" "seccion6 seccion5";    
+        background-color: #00250041;        
+            .icon_start{
+                grid-area: f1;
+            }        
+            .titulo{
+                grid-area: seccion2;
+            }        
+            .menu_productos{
+                grid-area: seccion3;
+            }        
+            .menu_ingreso{
+                grid-area: seccion4;
+            }      
+            .menu_about{
+                grid-area: seccion5;
+            }                
+            .links {
+                border: 0.1vh solid rgba(255, 239, 239, 0.425); 
+            }      
+                  
+            
     }
 
     .menu_horizontal > .option > a {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
+        display: flex;          
         align-items: center;
-        min-height: 100%;    
-    }        
-    
+        text-align: center;
+        min-height: 100%;          
+    }            
     .contenedor_galeria{
         grid-template-columns: 1fr;
         grid-template-areas: "foto1" "foto2" "foto3" "foto4";        
     }
     .box{
         margin: 5px;
-    }    
+    }   
+    .icon_start {
+        padding-top: 5vh;        
+        a{
+            img{
+                width: 8vh;
+            }
+        }    
+    }
+    .titulo {
+        padding-top: 6vh;   
+        a{
+            h1{
+                font-size: 5vh; 
+            }
+        } 
+    }
     
-    .carousel_container {
+    .carousel_container {       
         padding-top: 5vh;
         padding-right: 0;
-        padding-left: 0;
+        padding-left: 8vh;
+        .box_carousel {              
+            border: 0.5vh solid rgba(255, 239, 239, 0.425);
+            width: 25rem;
+            height: 25rem;      
+        }   
+    }
+
+    .contactos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
     }
 }
 
