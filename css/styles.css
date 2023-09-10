@@ -216,7 +216,7 @@ a {
   margin: 50px 50px;
   color: bisque;
   background-color: rgba(170, 127, 199, 0.1647058824);
-  font-size: 20px;
+  font-size: 3.5vh;
 }
 
 /* Contactos */
@@ -234,6 +234,14 @@ a {
 }
 
 @media (max-width: 550px) {
+  .text_aboutUs {
+    text-align: center;
+    height: 17vh;
+    margin: 50px 50px;
+    color: bisque;
+    background-color: rgba(170, 127, 199, 0.1647058824);
+    font-size: 2vh;
+  }
   .menu_horizontal {
     min-height: 4vh;
     width: 100vw;

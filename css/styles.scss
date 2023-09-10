@@ -221,7 +221,7 @@ a{
     margin: 50px 50px;
     color: bisque;
     background-color: #aa7fc72a;
-    font-size: 20px;
+    font-size: 3.5vh;
 }
 
 
@@ -244,6 +244,15 @@ a{
 
 @media (max-width: 550px){
     
+    .text_aboutUs {
+        text-align: center;
+        height: 17vh;
+        margin: 50px 50px;
+        color: bisque;
+        background-color: #aa7fc72a;
+        font-size: 2vh;
+    }
+
     .menu_horizontal{
         min-height: 4vh;
         width: 100vw;
