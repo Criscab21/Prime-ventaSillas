@@ -216,7 +216,7 @@ a {
   margin: 50px 50px;
   color: bisque;
   background-color: rgba(170, 127, 199, 0.1647058824);
-  font-size: 3.5vh;
+  font-size: 2vh;
 }
 
 /* Contactos */
@@ -297,6 +297,7 @@ a {
   .contactos {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    font-size: 1.6vh;
   }
   .tarjeta_login {
     width: 60vw;
