@@ -1,0 +1,21 @@
+.contactos {
+    margin-top: 2vh;
+    display: flex;    
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 25vh;
+    border-top: 1.5vh solid rgba(255, 239, 239, 0.527);          
+    background: linear-gradient(38deg, rgb(82, 73, 253) 0%, #51574396 83%, #6861bebd 100%);
+    .venta_telefono, .horarios, .escribinos, .whatsapp {
+        text-align: center;
+    }
+}
+
+.text_aboutUs {
+    text-align: center;
+    height: 17vh;
+    margin: 50px 50px;
+    color: bisque;
+    background-color: #aa7fc72a;
+    font-size: 2vh;
+}

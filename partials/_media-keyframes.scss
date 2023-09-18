@@ -1,0 +1,134 @@
+@media (max-width: 550px){
+    
+    .text_aboutUs {
+        text-align: center;
+        height: 17vh;
+        margin: 50px 50px;
+        color: bisque;
+        background-color: #aa7fc72a;
+        font-size: 2vh;
+    }
+
+    .menu_horizontal{
+        min-height: 4vh;
+        width: 100vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;                            
+        grid-template-areas: 
+        "f1 seccion3" "seccion2 seccion4" "seccion6 seccion5";    
+        background-color: #00250041;        
+        .icon_start{
+            grid-area: f1;
+        }        
+        .titulo{
+            grid-area: seccion2;
+        }        
+        .menu_productos{
+            grid-area: seccion3;
+        }        
+        .menu_ingreso{
+            grid-area: seccion4;
+        }      
+        .menu_about{
+            grid-area: seccion5;
+        }                
+        .links {
+            border: 0.1vh solid rgba(255, 239, 239, 0.425); 
+        }      
+        
+        
+    }
+    
+    .menu_horizontal > .option > a {
+        display: flex;          
+        align-items: center;
+        text-align: center;
+        min-height: 100%;          
+    }            
+    .contenedor_galeria{
+        grid-template-columns: 1fr;
+        grid-template-areas: "foto1" "foto2" "foto3" "foto4";        
+    }
+    .box{
+        margin: 5px;
+    }   
+    .icon_start {
+        padding-top: 5vh;        
+        a{
+            img{
+                width: 8vw;
+            }
+        }    
+    }
+    .titulo {
+        padding-top: 6vh;   
+        a{
+            h1{
+                font-size: 5vh; 
+            }
+        } 
+    }      
+        
+    .contactos {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.6vh;
+    }
+    .tarjeta_login {    
+        width: 60vw;
+        height: 40vh;        
+        display: flex;    
+        justify-content: center;
+        align-content: center;
+        border: 0.5vh solid rgba(255, 239, 239, 0.425);
+        margin-left: 20vw;
+        margin-top: 2vh;        
+        
+            .form_login{                           
+                min-width: 50vw;
+                .input_ingreso{        
+                    width: 10vw;            
+                    margin-top: 1vw;
+                    margin-left: 8vw;
+                    border: none;                   
+                    border-bottom: 2px solid rgba(0, 0, 0, 0.151);
+                }
+                .button_ingreso{
+                    margin-top: 3vw;
+                    margin-left: 15vw;
+                    border-top: none;
+                }
+                .button_ingreso:hover{
+                    background-color: $color-link-button-hover;
+                    color: $color-link-button-text;
+                }
+            }
+            .form_login h2, .form_registro h2 {
+                border-bottom: 4px solid rgba(0, 0, 0, 0.349);
+                font-size: 6vh;   
+                color: rgb(34, 26, 31);
+                text-align: center;
+            }
+    }
+}
+
+@keyframes iconSpin {
+    
+    0% {
+        transform: rotateY(630deg);
+    }
+    
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

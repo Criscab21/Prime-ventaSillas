@@ -1,0 +1,54 @@
+.tarjeta_login {    
+    width: 50vw;
+    height: 45vh;        
+    display: flex;    
+    justify-content: center;
+    align-content: center;
+    border: 0.5vh solid rgba(255, 239, 239, 0.425);
+    margin-left: 25vw;
+    margin-top: 2vh;   
+    
+        .form_login{                  
+            min-width: 45vw;
+            .input_ingreso{
+                width: 40vw;
+                min-width: 40vw;
+                margin-top: 1vh;
+                margin-left: 4vw;
+                border: none;                   
+                border-bottom: 2px solid rgba(0, 0, 0, 0.151);
+            }
+            .button_ingreso{
+                margin-top: 1vw;
+                margin-left: 10vw;
+                min-width: 30vw;                            
+                border-top: none;
+            }
+            .button_ingreso:hover{
+                background-color: $color-link-button-hover;
+                color: $color-link-button-text;
+            }
+        }
+        .form_login h2, .form_registro h2 {
+            border-bottom: 4px solid rgba(0, 0, 0, 0.349);
+            font-size: 6vh;   
+            color: rgb(34, 26, 31);
+            text-align: center;
+        }
+}  
+
+.form_login > input, .form_registro > form input{
+    color: rgb(241, 207, 228);
+    background-color: rgba(0, 0, 0, 0);        
+    font-size: 3vh;           
+    border-bottom:4px solid black ;    
+}
+
+.form_login > input::placeholder, .form_registro > form input::placeholder{    
+    color: bisque;
+}
+
+.form_registro > form #registro_enviar:hover, #registro_reset:hover {
+    background-color: $color-link-button-hover;
+    color: $color-link-button-text;
+}

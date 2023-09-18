@@ -1,0 +1,27 @@
+.icon_start {
+    animation-name: iconSpin;
+    animation-duration: 2s;
+    animation-delay: 0;
+    a{
+        img{
+            width: 12vh;
+        }
+    }    
+}
+    
+.h1_registro {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 6vw;
+    font-family: sans-serif;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #a1aadb11;    
+    color: #2e2222;  
+}
+    
+.titulo > a > h1{    
+    color: #1f16a3; 
+}
